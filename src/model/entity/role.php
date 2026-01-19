@@ -1,6 +1,6 @@
 <?php
 
-
+namespace Src\Model\Entity;
 class Role{
     private $id;
     private $name;

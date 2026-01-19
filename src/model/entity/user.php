@@ -1,6 +1,8 @@
 <?php
 
-include_once __DIR__ . "/../entity/role.php";
+// include_once __DIR__ . "/../entity/role.php";
+namespace Src\Model\Entity;
+use src\Model\Entity\Role;
 class User {
     private $id;
     private $name;

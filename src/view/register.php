@@ -67,7 +67,7 @@
 </head>
 
 <body>
-    <form action="../controller/authcontroller.php" method="post">
+    <form action="AddUser" method="post">
         <div class="container">
             <h1>Inscription</h1>
             <p>Veuillez remplir ce formulaire pour créer un compte SecureCore.</p>

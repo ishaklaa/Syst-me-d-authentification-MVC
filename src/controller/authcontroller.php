@@ -1,6 +1,9 @@
 <?php
-include_once __DIR__ . "/../view/register.php";
-include_once __DIR__ ."/../model/sevices/AuthService.php";
+namespace Src\Controller;
+
+// include_once __DIR__ . "/../view/register.php";
+// include_once __DIR__ ."/../model/sevices/AuthService.php";
+use src\Model\Sevices\AuthService;
 
 class Authcontroller
 {
@@ -8,6 +11,10 @@ class Authcontroller
     public function __construct()
     {
         $this->authService = new AuthService();
+    }
+    public function getRegister()
+    {
+        require 'view/public/register.php';
     }
    public function inputCheck()
 {
@@ -37,20 +44,10 @@ class Authcontroller
         }
 
         if (empty($errors)) {
-            try {
+            
             $hassedPsw = password_hash($password, PASSWORD_DEFAULT);
             $this->authService->register($name,$email,$hassedPsw,$role);
-            echo"hello";
-            } catch (\Throwable $th) {
-                throw new  Exception("error");
-            }
             $hassedPsw = password_hash($password, PASSWORD_DEFAULT);
-            $this->authService->register($name,$email,$hassedPsw,$role);
-            echo"hello";
-        }else{
-              echo "no";
-        }}else{
-            echo "9lwa";
-            exit;
-        }
+            
+        }}
 }}

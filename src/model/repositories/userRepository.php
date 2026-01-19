@@ -1,6 +1,10 @@
 <?php
-include_once __DIR__ ."/../entity/user.php";
-include_once __DIR__ ."/../../config/database.php";
+// include_once __DIR__ ."/../entity/user.php";
+// include_once __DIR__ ."/../../config/database.php";
+namespace Src\Model\Repositories;
+use src\Model\Entity\User;
+use PDO;
+use src\Config\Database;
 class  UserRepository
 {
     private $conn;
@@ -17,9 +21,8 @@ class  UserRepository
         $stmt = $this->conn->prepare($query);
         $name = $user->getName();
         $email = $user->getEmail();
-        $password = $user->getUser();
-        var_dump($name);
-        exit;
+        $password = $user->getPassword();
+    
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam('password', $password);

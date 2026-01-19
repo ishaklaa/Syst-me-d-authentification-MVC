@@ -1,15 +1,11 @@
 {
-    "name": "laaou/syst-me-d-authentification-mvc",
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Src\\Config\\": "Src/Config/",
+            "Src\\Controller\\": "Src/Controller/",
+            "Src\\Model\\Entit\\": "Src/Model/Entit/",
+            "Src\\Model\\Sevices\\": "Src/Model/Sevices/",
+            "Src\\Model\\Repositories\\": "Src/Model/Repositories/"
         }
-    },
-    "authors": [
-        {
-            "name": "laaouafi ishak",
-            "email": "laaouafi6@gmail.com"
-        }
-    ],
-    "require": {}
+    }
 }
